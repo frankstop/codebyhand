@@ -1,6 +1,6 @@
 # CodeByHand
 
-**Live Practice Site:** `https://frankstop.github.io/codebyhand/`
+**Live Practice Site:** https://frankiejvaldez.com/codebyhand/
 
 **CodeByHand** is a fast, zero-setup, repetition-focused coding practice platform inspired by [CodingBat](https://codingbat.com/), built to develop core programming fluency across three radically different paradigms: **JavaScript (ES2023)**, **Rust (Edition 2021)**, and **COBOL (GnuCOBOL 3.2)**.
 
