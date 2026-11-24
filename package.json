@@ -1,0 +1,51 @@
+{
+  "name": "codebyhand",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CodeByHand — Zero-setup, CodingBat-inspired coding practice platform for JavaScript, Rust, and COBOL",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"tsx watch server/index.ts\" \"vite\"",
+    "dev:web": "vite",
+    "dev:api": "tsx watch server/index.ts",
+    "prepare:wasm": "cobol-wasm-copy-assets public/cobol-wasm",
+    "build": "npm run prepare:wasm && tsc --noEmit && vite build",
+    "start": "NODE_ENV=production tsx server/index.ts",
+    "typecheck": "tsc --noEmit",
+    "qa:solutions": "tsx qa/verifyAllSolutions.ts",
+    "qa:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.18.6",
+    "@codemirror/commands": "^6.8.1",
+    "@codemirror/lang-javascript": "^6.2.4",
+    "@codemirror/lang-rust": "^6.0.2",
+    "@codemirror/language": "^6.11.0",
+    "@codemirror/lint": "^6.8.5",
+    "@codemirror/search": "^6.5.11",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.36.5",
+    "@lezer/highlight": "^1.2.1",
+    "@live-codes/cobol-wasm": "^0.1.0",
+    "codemirror": "^6.0.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "input-switch-polyfill": "^1.0.0",
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.0",
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
